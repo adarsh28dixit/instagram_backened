@@ -14,15 +14,7 @@ profileRouter.post('/profile', (req, res) => {
     })
 })
 
-profileRouter.get('/profile', (req, res) => {
-    Profile.find((err, data) => {
-        if(err){
-            res.status(400).send({msg : err.msg})
-        } else{
-            res.status(200).send(data)
-        }
-    })
-})
+
 
 profileRouter.get('/profile/:id', (req, res) => {
     const profile = req.params.id;
